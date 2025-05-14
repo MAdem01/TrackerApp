@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
+import com.example.trackerapp.navigation.TrackerNavigation
 import com.example.trackerapp.ui.theme.TrackerAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,6 +14,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MyApp {
+                TrackerNavigation()
             }
         }
     }
@@ -24,3 +26,4 @@ fun MyApp(content: @Composable () -> Unit){
         content()
     }
 }
+
